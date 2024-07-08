@@ -1,0 +1,33 @@
+{
+  "name": "trello.ts",
+  "version": "0.1.0-beta",
+  "description": "An API made with Typescript for Trello",
+  "main": "src/Trello.ts",
+  "scripts": {
+    "start": "tsx src/Trello.ts",
+    "start:dev": "tsx watch src/Trello.ts",
+    "build": "tsup src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "gt+https://github.com/dixavier27/trello.ts.git"
+  },
+  "keywords": [
+    "trello",
+    "typescript",
+    "api",
+    "nodejs"
+  ],
+  "author": "Affonso Xavier",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dixavier27/trello.ts/issues"
+  },
+  "homepage": "https://github.com/dixavier27/trello.ts#readme",
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "tsup": "^8.1.0",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.3"
+  }
+}
