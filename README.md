@@ -35,10 +35,10 @@ At the total, Trello's API have `18 endpoints` (Actions, Applications, Batch, Bo
 ### Batch
 	* [ ] GET /batch
 ### Boards
-	* [ ] GET /boards/{id}/memberships
-	* [ ] GET /boards/{id}
-	* [ ] PUT /boards/{id}
-	* [ ] DEL /boards/{id}
+	* [x] GET /boards/{id}/memberships
+	* [x] GET /boards/{id}
+	* [x] PUT /boards/{id}
+	* [x] DEL /boards/{id}
 	* [ ] GET /boards/{id}/{field}
 	* [ ] GET /boards/{boardId}/actions
 	* [ ] GET /boards/{id}/cards/{idCard}
@@ -64,7 +64,7 @@ At the total, Trello's API have `18 endpoints` (Actions, Applications, Batch, Bo
 	* [ ] PUT /boards/{id}/myPrefs/showSidebarActivity
 	* [ ] PUT /boards/{id}/myPrefs/showSidebarBoardActions
 	* [ ] PUT /boards/{id}/myPrefs/showSidebarMembers
-	* [ ] POST /boards/
+	* [x] POST /boards/
 	* [ ] POST /boards/{id}/calendarKey/generate
 	* [ ] POST /boards/{id}/emailKey/generate
 	* [ ] POST /boards/{id}/idTags
@@ -194,7 +194,7 @@ At the total, Trello's API have `18 endpoints` (Actions, Applications, Batch, Bo
 	* [ ] GET /members/{id}/boardStars/{idStar}
 	* [ ] PUT /members/{id}/boardStars/{idStar}
 	* [ ] DEL /members/{id}/boardStars/{idStar}
-	* [ ] GET /members/{id}/boards
+	* [x] GET /members/{id}/boards
 	* [ ] GET /members/{id}/boardsInvited
 	* [ ] GET /members/{id}/cards
 	* [ ] GET /members/{id}/customBoardBackgrounds
