@@ -99,6 +99,21 @@ export async function updateBoard(
 }
 
 // DEL /boards/{id}
+export async function deleteBoard(
+    id: string
+): Promise<any> {
+    try {
+        const url = `${apiUrl}/boards/${id}?${apiAuth}`; // PUT
+        // console.log(url)
+        const response = await axios.delete(url);
+        return response.data
+    } catch (error: any) {
+        const err = `❌ Error (${error.response.status}): ${error.response.statusText} - ${error.response.data}`
+        console.error(err);
+        throw new Error(err);
+    }
+}
+
 // GET /boards/{id}/{field}
 // GET /boards/{boardId}/actions
 // GET /boards/{id}/cards/{idCard}
