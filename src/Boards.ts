@@ -148,6 +148,24 @@ export async function getBoardLists(
 }
 
 // POST /boards/{id}/lists
+export async function createBoardList(
+    id: string,
+    params?: {
+        name: string,
+        pos?: string
+    }
+): Promise<List> {
+    try {
+        const url = `${apiUrl}/boards/${id}/lists?${apiAuth}`; // GET
+        const response = await axios.post(url, params);
+        return response.data
+    } catch (error: any) {
+        const err = `❌ Error (${error.response.status}): ${error.response.statusText} - ${error.response.data}`
+        console.error(err);
+        throw new Error(err);
+    }
+}
+
 // GET /boards/{id}/lists/{filter}
 // GET /boards/{id}/members
 // PUT /boards/{id}/members
