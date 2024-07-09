@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { apiUrl, apiAuth } from './Trello';
 import { Board } from './Interfaces/Board';
+import { List } from './Interfaces/List';
 
 // GET /boards/{id}/memberships
 export async function getBoardMemberships(
@@ -124,7 +125,28 @@ export async function deleteBoard(
 // GET /boards/{id}/customFields
 // GET /boards/{id}/labels
 // POST /boards/{id}/labels
+
 // GET /boards/{id}/lists
+export async function getBoardLists(
+    id: string,
+    params?: {
+        cards?: 'all' | 'closed' | 'none' | 'open',
+        card_fields?: string,
+        filter?: 'all' | 'closed' | 'none' | 'open',
+        fields?: string
+    }
+): Promise<List[]> {
+    try {
+        const url = `${apiUrl}/boards/${id}/lists?${apiAuth}`; // GET
+        const response = await axios.get(url, { params });
+        return response.data
+    } catch (error: any) {
+        const err = `❌ Error (${error.response.status}): ${error.response.statusText} - ${error.response.data}`
+        console.error(err);
+        throw new Error(err);
+    }
+}
+
 // POST /boards/{id}/lists
 // GET /boards/{id}/lists/{filter}
 // GET /boards/{id}/members
