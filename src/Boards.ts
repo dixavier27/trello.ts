@@ -1,17 +1,26 @@
-export const Boards = {};
+import axios from 'axios';
+import { apiUrl, apiAuth } from './Trello';
 
 // GET /boards/{id}/memberships
 export async function getBoardMemberships(
     id: string,
     params?: {
-        filter?: string;
+        filter?: 'admins' | 'all' | 'none' | 'normal',
         activity?: boolean;
         orgMemberType?: boolean;
         member?: boolean;
-        member_fields?: any; // interface
+        member_fields?: string; // interface
     }
 ): Promise<any> {
-    const url = `/1/boards/${id}/memberships`; // GET
+    try {
+        const url = `${apiUrl}/boards/${id}/memberships?${apiAuth}`; // GET
+        const response = await axios.get(url, { params });
+        return response.data
+    } catch (error: any) {
+        const err = `❌ Error (${error.response.status}): ${error.response.statusText} - ${error.response.data}`
+        console.error(err);
+        throw new Error(err);
+    }
 }
 
 // GET /boards/{id}
