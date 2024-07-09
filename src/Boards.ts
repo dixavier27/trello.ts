@@ -15,6 +15,30 @@ async function getBoardMemberships(
 }
 
 // GET /boards/{id}
+async function getBoard(
+    id: string,
+    params?: {
+        actions?: string;
+        boardStars?: string;
+        cards?: string;
+        card_pluginData?: boolean;
+        checklists?: string;
+        customFields?: boolean;
+        fields?: string;
+        labels?: string;
+        lists?: string;
+        members?: string;
+        memberships?: string;
+        pluginData?: boolean;
+        organization?: boolean;
+        organization_pluginData?: boolean;
+        myPrefs?: boolean;
+        tags?: boolean;
+    }
+): Promise<any> {
+    const url = `/1/boards/${id}`; // GET
+}
+
 // PUT /boards/{id}
 // DEL /boards/{id}
 // GET /boards/{id}/{field}
