@@ -63,7 +63,7 @@ export async function updateBoard(
         name?: string;
         desc?: string;
         closed?: boolean;
-        subscribed?: string; // trelloID
+        subscribed?: any; // string
         idOrganization?: string;
         prefs?: {
             permissionLevel?: string;
@@ -87,7 +87,15 @@ export async function updateBoard(
         };
     }
 ): Promise<any> {
-    const url = `/1/boards/${id}`; // PUT
+    try {
+        const url = `${apiUrl}/boards/${id}?${apiAuth}`; // PUT
+        const response = await axios.put(url, params);
+        return response.data
+    } catch (error: any) {
+        const err = `❌ Error (${error.response.status}): ${error.response.statusText} - ${error.response.data}`
+        console.error(err);
+        throw new Error(err);
+    }
 }
 
 // DEL /boards/{id}
