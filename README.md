@@ -12,6 +12,7 @@ https://developer.atlassian.com/cloud/trello/rest/
 https://trello.com/1/authorize?expiration=never&name={{NAME}}&scope=read,write&response_type=token&key={{KEY}}
 ````
 ## List of Endpoints and Operations
+At the total, Trello's API have `18 endpoints` (Actions, Applications, Batch, Boards, Cards, Checklists, CustomFields, Emoji, Enterprises, Labels, Lists, Members, Notifications, Organizations, Plugins, Search, Tokens, Webhooks) and `257 operations` (no, I won't do that to you guys, lol). So, to get all these tasks done I organized a list of items to work in gradually. Then, Ladies and Gentlemans, I hope you enjoy, let's code together!
 ### Actions
 	* [ ] GET /actions/{id}
 	* [ ] PUT /actions/{id}
