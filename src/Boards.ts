@@ -40,6 +40,39 @@ async function getBoard(
 }
 
 // PUT /boards/{id}
+async function updateBoard(
+    id: string,
+    params?: {
+        name?: string;
+        desc?: string;
+        closed?: boolean;
+        subscribed?: string; // trelloID
+        idOrganization?: string;
+        prefs?: {
+            permissionLevel?: string;
+            selfJoin?: boolean;
+            cardCovers?: boolean;
+            hideVotes?: boolean;
+            invitations?: string;
+            voting?: string;
+            comments?: string;
+            background?: string;
+            cardAging?: string;
+            calendarFeedEnabled?: boolean;
+        };
+        labelNames?: {
+            green?: string;
+            yellow?: string;
+            orange?: string;
+            red?: string;
+            purple?: string;
+            blue?: string;
+        };
+    }
+): Promise<any> {
+    const url = `/1/boards/${id}`; // PUT
+}
+
 // DEL /boards/{id}
 // GET /boards/{id}/{field}
 // GET /boards/{boardId}/actions
