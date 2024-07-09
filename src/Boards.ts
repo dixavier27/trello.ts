@@ -45,7 +45,15 @@ export async function getBoard(
         tags?: boolean;
     }
 ): Promise<any> {
-    const url = `/1/boards/${id}`; // GET
+    try {
+        const url = `${apiUrl}/boards/${id}?${apiAuth}`; // GET
+        const response = await axios.get(url, { params });
+        return response.data
+    } catch (error: any) {
+        const err = `❌ Error (${error.response.status}): ${error.response.statusText} - ${error.response.data}`
+        console.error(err);
+        throw new Error(err);
+    }
 }
 
 // PUT /boards/{id}
