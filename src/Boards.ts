@@ -139,7 +139,38 @@ export async function deleteBoard(
 // PUT /boards/{id}/myPrefs/showSidebarActivity
 // PUT /boards/{id}/myPrefs/showSidebarBoardActions
 // PUT /boards/{id}/myPrefs/showSidebarMembers
+
 // POST /boards/
+export async function createBoard(
+    params: {
+        name: string,
+        defaultLabels?: boolean,
+        defaultLists?: boolean,
+        desc?: string,
+        idOrganization?: string,
+        idBoardSource?: string,
+        keepFromSource?: string,
+        powerUps?: string,
+        prefs_permissionLevel?: string,
+        prefs_voting?: string,
+        prefs_comments?: string,
+        prefs_invitations?: string,
+        prefs_selfJoin?: boolean,
+        prefs_cardCovers?: boolean,
+        prefs_background?: string,
+        prefs_cardAging?: string
+    }): Promise<any> {
+    try {
+        const url = `${apiUrl}/boards/?${apiAuth}`; // PUT
+        const response = await axios.post(url, params);
+        return response.data
+    } catch (error: any) {
+        const err = `❌ Error (${error.response.status}): ${error.response.statusText} - ${error.response.data}`
+        console.error(err);
+        throw new Error(err);
+    }
+}
+
 // POST /boards/{id}/calendarKey/generate
 // POST /boards/{id}/emailKey/generate
 // POST /boards/{id}/idTags
