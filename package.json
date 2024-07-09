@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "gt+https://github.com/dixavier27/trello.ts.git"
+    "url": "git+https://github.com/dixavier27/trello.ts.git"
   },
   "keywords": [
     "trello",
