@@ -2,6 +2,7 @@
   "name": "trello.ts",
   "version": "0.1.0-beta",
   "description": "An API made with Typescript for Trello",
+  "type": "module",
   "main": "src/Trello.ts",
   "scripts": {
     "start": "tsx src/Trello.ts",
