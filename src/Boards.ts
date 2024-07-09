@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { apiUrl, apiAuth } from './Trello';
+import { Board } from './Interfaces/Board';
 
 // GET /boards/{id}/memberships
 export async function getBoardMemberships(
@@ -44,7 +45,7 @@ export async function getBoard(
         myPrefs?: boolean;
         tags?: boolean;
     }
-): Promise<any> {
+): Promise<Board> {
     try {
         const url = `${apiUrl}/boards/${id}?${apiAuth}`; // GET
         const response = await axios.get(url, { params });
@@ -86,7 +87,7 @@ export async function updateBoard(
             blue?: string;
         };
     }
-): Promise<any> {
+): Promise<Board> {
     try {
         const url = `${apiUrl}/boards/${id}?${apiAuth}`; // PUT
         const response = await axios.put(url, params);
@@ -104,7 +105,6 @@ export async function deleteBoard(
 ): Promise<any> {
     try {
         const url = `${apiUrl}/boards/${id}?${apiAuth}`; // PUT
-        // console.log(url)
         const response = await axios.delete(url);
         return response.data
     } catch (error: any) {
@@ -159,7 +159,7 @@ export async function createBoard(
         prefs_cardCovers?: boolean,
         prefs_background?: string,
         prefs_cardAging?: string
-    }): Promise<any> {
+    }): Promise<Board> {
     try {
         const url = `${apiUrl}/boards/?${apiAuth}`; // PUT
         const response = await axios.post(url, params);
