@@ -1,7 +1,7 @@
 export const Boards = {};
 
 // GET /boards/{id}/memberships
-async function getBoardMemberships(
+export async function getBoardMemberships(
     id: string,
     params?: {
         filter?: string;
@@ -15,7 +15,7 @@ async function getBoardMemberships(
 }
 
 // GET /boards/{id}
-async function getBoard(
+export async function getBoard(
     id: string,
     params?: {
         actions?: string;
@@ -40,7 +40,7 @@ async function getBoard(
 }
 
 // PUT /boards/{id}
-async function updateBoard(
+export async function updateBoard(
     id: string,
     params?: {
         name?: string;
