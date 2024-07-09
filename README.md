@@ -15,7 +15,10 @@ https://trello.com/1/authorize?expiration=never&name={{NAME}}&scope=read,write&r
 At the total, Trello's API have `18 endpoints` (Actions, Applications, Batch, Boards, Cards, Checklists, CustomFields, Emoji, Enterprises, Labels, Lists, Members, Notifications, Organizations, Plugins, Search, Tokens, Webhooks) and `257 operations` (no, I won't do that to you guys, lol). So, to get all these tasks done I organized a list of items to work in gradually. Then, Ladies and Gentlemans, I hope you enjoy, let's code together!
 
 **Endpoints: 0/18**
-**Operations: 5/257**
+
+**Operations: 8/257**
+
+**Total: 3,11%**
 
 ### Actions
 	* [ ] GET /actions/{id}
@@ -53,8 +56,8 @@ At the total, Trello's API have `18 endpoints` (Actions, Applications, Batch, Bo
 	* [ ] GET /boards/{id}/customFields
 	* [ ] GET /boards/{id}/labels
 	* [ ] POST /boards/{id}/labels
-	* [ ] GET /boards/{id}/lists
-	* [ ] POST /boards/{id}/lists
+	* [x] GET /boards/{id}/lists
+	* [x] POST /boards/{id}/lists
 	* [ ] GET /boards/{id}/lists/{filter}
 	* [ ] GET /boards/{id}/members
 	* [ ] PUT /boards/{id}/members
