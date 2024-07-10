@@ -41,5 +41,9 @@ Boards.getBoardLists('66884501d7ef1f7f86227287', { cards: 'all', fields: 'name',
 // });
 
 // Cards.updateCard('668e26ea01bbe03176807214', { name: 'Outro Nome', desc: 'Algumas descrição', due: '2024-07-13T04:00:00.000Z', subscribed: true }).then(res => {
-//     console.log('\x1b[36m%s\x1b[0m', '✅ getCard:', res, '\n');
+//     console.log('\x1b[36m%s\x1b[0m', '✅ updateCard:', res, '\n');
+// });
+
+// Cards.deleteCard('668e26ea01bbe03176807214').then(res => {
+//     console.log('\x1b[36m%s\x1b[0m', '✅ deleteCard:', res, '\n');
 // });

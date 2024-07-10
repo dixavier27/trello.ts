@@ -100,6 +100,18 @@ export async function updateCard(id: string,
 }
 
 // DEL /cards/{id}
+export async function deleteCard(id: string): Promise<Card> {
+    try {
+        const url = `${apiUrl}/cards/${id}?${apiAuth}`; // POST
+        const response = await axios.delete(url);
+        return response.data
+    } catch (error: any) {
+        const err = `❌ Error (${error.response.status}): ${error.response.statusText} - ${error.response.data}`
+        console.error(err);
+        throw new Error(err);
+    }
+}
+
 // GET /cards/{id}/{field}
 // GET /cards/{id}/actions
 // GET /cards/{id}/attachments
