@@ -68,6 +68,37 @@ export async function getCard(id: string, params?: {
 }
 
 // PUT /cards/{id}
+export async function updateCard(id: string,
+    params?: {
+        name?: string,
+        desc?: string,
+        closed?: boolean,
+        idMembers?: string,
+        idAttachmentCover?: string,
+        idList?: string,
+        idLabels?: string,
+        idBoard?: string,
+        pos?: string | number,
+        due?: string,
+        start?: string,
+        dueComplete?: boolean,
+        subscribed?: boolean,
+        address?: string,
+        locationName?: string,
+        coordinates?: string,
+        cover?: object,
+    }): Promise<Card> {
+    try {
+        const url = `${apiUrl}/cards/${id}?${apiAuth}`; // PUT
+        const response = await axios.put(url, params);
+        return response.data
+    } catch (error: any) {
+        const err = `❌ Error (${error.response.status}): ${error.response.statusText} - ${error.response.data}`
+        console.error(err);
+        throw new Error(err);
+    }
+}
+
 // DEL /cards/{id}
 // GET /cards/{id}/{field}
 // GET /cards/{id}/actions
