@@ -1,43 +1,40 @@
 import dotenv from "dotenv";
-import { getMemberBoards } from "./Members";
-import { getBoardLists } from "./Boards";
-import { createCard, getCard } from "./Cards";
 
-export { Action } from './Actions';
+export import Action = require('./Actions');
 
-export { Applications } from './Applications'
+export import Applications = require('./Applications');
 
-export { Batch } from './Batch'
+export import Batch = require('./Batch');
 
-export { createBoard, createBoardList, deleteBoard, getBoard, getBoardLists, getBoardMemberships, updateBoard } from "./Boards";
+export import Boards = require('./Boards');
 
-export { createCard } from "./Cards";
+export import Cards = require('./Cards');
 
-export { Checklists } from './Checklists'
+export import Checklists = require('./Checklists');
 
-export { CustomFields } from './CustomFields'
+export import CustomFields = require('./CustomFields');
 
-export { Emoji } from './Emoji'
+export import Emoji = require('./Emoji');
 
-export { Enterprises } from './Enterprises'
+export import Enterprises = require('./Enterprises');
 
-export { Labels } from './Labels'
+export import Labels = require('./Labels');
 
-export { Lists } from './Lists'
+export import Lists = require('./Lists');
 
-export { getMemberBoards } from "./Members";
+export import Members = require('./Members');
 
-export { Notifications } from './Notifications'
+export import Notifications = require('./Notifications');
 
-export { Organizations } from './Organizations'
+export import Organizations = require('./Organizations');
 
-export { Plugins } from './Plugins'
+export import Plugins = require('./Plugins');
 
-export { Search } from './Search'
+export import Search = require('./Search');
 
-export { Tokens } from './Tokens'
+export import Tokens = require('./Tokens');
 
-export { Webhooks } from './Webhooks'
+export import Webhooks = require('./Webhooks');
 
 dotenv.config();
 
@@ -50,43 +47,3 @@ export const apiUrl = 'https://api.trello.com/1';
 export const apiAuth = `key=${apiKey}&token=${apiToken}`;
 
 console.log('🚀 It Works!\n')
-
-// getMemberBoards('me', { filter: undefined, fields: 'name' }).then(res => {
-//     console.log('\x1b[36m%s\x1b[0m', '✅ getMemberBoards:', res, '\n');
-// });
-
-// getBoardMemberships('66884501d7ef1f7f86227287', { filter: 'all', member: true, member_fields: 'username' }).then(res => {
-//     console.log('\x1b[36m%s\x1b[0m', '✅ Members:', res, '\n');
-// });
-
-// getBoard('66884501d7ef1f7f86227287', { fields: 'name' }).then(res => {
-//     console.log('\x1b[36m%s\x1b[0m', '✅ getBoard:', res, '\n');
-// })
-
-// updateBoard('66884501d7ef1f7f86227287', { name: 'Quadro de Teste'}).then(res => {
-//     console.log('\x1b[36m%s\x1b[0m', '✅ updateBoard:', res, '\n');
-// });
-
-// deleteBoard('668d9bf0de01eea4c37ab6c4').then(res => {
-//     console.log('\x1b[36m%s\x1b[0m', '✅ deleteBoard:', true, '\n');
-// });
-
-// createBoard({ name: 'Exemplo de Quadro' }).then(res => {
-//     console.log('\x1b[36m%s\x1b[0m', '✅ createBoard:', res, '\n');
-// });
-
-// getBoardLists('66884501d7ef1f7f86227287', { cards: 'all', fields: 'name', card_fields: undefined }).then(res => {
-//     console.log('\x1b[36m%s\x1b[0m', '✅ getBoardLists:', res, '\n');
-// });
-
-// createBoardList('66884501d7ef1f7f86227287', { name: 'A ser feito' }).then(res => {
-//     console.log('\x1b[36m%s\x1b[0m', '✅ getBoardLists:', res, '\n');
-// });
-
-// createCard({ name: 'Nome Maluco!', idList: '6688450b6e893347ec7e6de6' }).then(res => {
-//     console.log('\x1b[36m%s\x1b[0m', '✅ createCard:', res, '\n');
-// });
-
-getCard('668e17ee001286d8be81c582', { fields: 'name'}).then(res => {
-    console.log('\x1b[36m%s\x1b[0m', '✅ getCard:', res, '\n');
-});
