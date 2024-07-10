@@ -1,3 +1,5 @@
+import { Card } from "./Card";
+
 export interface Board {
     id: string;
     name: string;
@@ -15,4 +17,5 @@ export interface Board {
     limits: any;
     memberships: any[];
     enterpriseOwned: boolean;
+    cards: Card[];
 }
