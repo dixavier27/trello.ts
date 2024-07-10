@@ -36,6 +36,37 @@ export async function createCard(
 }
 
 // GET /cards/{id}
+export async function getCard(id: string, params?: {
+    fields?: string,
+    actions?: string,
+    attachments?: string | boolean,
+    attachment_fields?: string,
+    members?: boolean,
+    member_fields?: string,
+    membersVoted?: boolean,
+    memberVoted_fields?: string,
+    checkItemStates?: boolean,
+    checklists?: string,
+    checklist_fields?: string,
+    board?: boolean,
+    board_fields?: string,
+    list?: boolean,
+    pluginData?: boolean,
+    stickers?: boolean,
+    sticker_fields?: string,
+    customFieldItems?: boolean,
+}): Promise<Card> {
+    try {
+        const url = `${apiUrl}/cards/${id}?${apiAuth}`; // POST
+        const response = await axios.get(url, { params });
+        return response.data
+    } catch (error: any) {
+        const err = `❌ Error (${error.response.status}): ${error.response.statusText} - ${error.response.data}`
+        console.error(err);
+        throw new Error(err);
+    }
+}
+
 // PUT /cards/{id}
 // DEL /cards/{id}
 // GET /cards/{id}/{field}

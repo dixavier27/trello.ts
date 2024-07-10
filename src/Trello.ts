@@ -1,6 +1,7 @@
 import dotenv from "dotenv";
 import { getMemberBoards } from "./Members";
 import { getBoardLists } from "./Boards";
+import { createCard, getCard } from "./Cards";
 
 export { Action } from './Actions';
 
@@ -50,9 +51,9 @@ export const apiAuth = `key=${apiKey}&token=${apiToken}`;
 
 console.log('🚀 It Works!\n')
 
-getMemberBoards('me', { filter: undefined, fields: 'name' }).then(res => {
-    console.log('\x1b[36m%s\x1b[0m', '✅ getMemberBoards:', res, '\n');
-});
+// getMemberBoards('me', { filter: undefined, fields: 'name' }).then(res => {
+//     console.log('\x1b[36m%s\x1b[0m', '✅ getMemberBoards:', res, '\n');
+// });
 
 // getBoardMemberships('66884501d7ef1f7f86227287', { filter: 'all', member: true, member_fields: 'username' }).then(res => {
 //     console.log('\x1b[36m%s\x1b[0m', '✅ Members:', res, '\n');
@@ -74,9 +75,9 @@ getMemberBoards('me', { filter: undefined, fields: 'name' }).then(res => {
 //     console.log('\x1b[36m%s\x1b[0m', '✅ createBoard:', res, '\n');
 // });
 
-getBoardLists('66884501d7ef1f7f86227287', { cards: 'all', fields: 'name', card_fields: undefined }).then(res => {
-    console.log('\x1b[36m%s\x1b[0m', '✅ getBoardLists:', res, '\n');
-});
+// getBoardLists('66884501d7ef1f7f86227287', { cards: 'all', fields: 'name', card_fields: undefined }).then(res => {
+//     console.log('\x1b[36m%s\x1b[0m', '✅ getBoardLists:', res, '\n');
+// });
 
 // createBoardList('66884501d7ef1f7f86227287', { name: 'A ser feito' }).then(res => {
 //     console.log('\x1b[36m%s\x1b[0m', '✅ getBoardLists:', res, '\n');
@@ -85,3 +86,7 @@ getBoardLists('66884501d7ef1f7f86227287', { cards: 'all', fields: 'name', card_f
 // createCard({ name: 'Nome Maluco!', idList: '6688450b6e893347ec7e6de6' }).then(res => {
 //     console.log('\x1b[36m%s\x1b[0m', '✅ createCard:', res, '\n');
 // });
+
+getCard('668e17ee001286d8be81c582', { fields: 'name'}).then(res => {
+    console.log('\x1b[36m%s\x1b[0m', '✅ getCard:', res, '\n');
+});
