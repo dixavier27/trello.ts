@@ -47,3 +47,7 @@ Boards.getBoardLists('66884501d7ef1f7f86227287', { cards: 'all', fields: 'name',
 // Cards.deleteCard('668e26ea01bbe03176807214').then(res => {
 //     console.log('\x1b[36m%s\x1b[0m', '✅ deleteCard:', res, '\n');
 // });
+
+// Cards.getCardField('668e41e433684df90914989e', 'desc').then(res => {
+//     console.log('\x1b[36m%s\x1b[0m', '✅ getCardField:', res, '\n');
+// });
