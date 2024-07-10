@@ -201,7 +201,7 @@ export async function createBoard(
         prefs_cardAging?: string
     }): Promise<Board> {
     try {
-        const url = `${apiUrl}/boards/?${apiAuth}`; // PUT
+        const url = `${apiUrl}/boards/?${apiAuth}`; // POST
         const response = await axios.post(url, params);
         return response.data
     } catch (error: any) {
