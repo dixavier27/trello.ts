@@ -10,9 +10,10 @@ import { Members, Boards, Cards } from "./Trello";
 //         console.log('\x1b[36m%s\x1b[0m', '✅ getBoardMemberships:', res, '\n');
 //     });
 
-// Boards.getBoard('66884501d7ef1f7f86227287', { fields: 'name' }).then(res => {
-//     console.log('\x1b[36m%s\x1b[0m', '✅ getBoard:', res, '\n');
-// })
+Boards.getBoard({ id: '66884501d7ef1f7f86227287' }, { fields: 'name,desc' })
+    .then(res => {
+        console.log('\x1b[36m%s\x1b[0m', '✅ getBoard:', res, '\n');
+    })
 
 // Boards.updateBoard('66884501d7ef1f7f86227287', { name: 'Quadro de Teste', closed: false }).then(res => {
 //     console.log('\x1b[36m%s\x1b[0m', '✅ updateBoard:', res, '\n');

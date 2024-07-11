@@ -27,8 +27,8 @@ export async function getBoardMemberships(
 
 // GET /boards/{id}
 export async function getBoard(
-    id: string,
-    params?: {
+    pathParams: { id: string },
+    queryParams?: {
         actions?: string;
         boardStars?: string;
         cards?: string;
@@ -48,8 +48,8 @@ export async function getBoard(
     }
 ): Promise<Board> {
     try {
-        const url = `${apiUrl}/boards/${id}?${apiAuth}`; // GET
-        const response = await axios.get(url, { params });
+        const url = `${apiUrl}/boards/${pathParams.id}?${apiAuth}`; // GET
+        const response = await axios.get(url, { params: queryParams });
         return response.data
     } catch (error: any) {
         const err = `❌ Error (${error.response.status}): ${error.response.statusText} - ${error.response.data}`
