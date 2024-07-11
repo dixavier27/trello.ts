@@ -102,10 +102,10 @@ export async function updateBoard(
 
 // DEL /boards/{id}
 export async function deleteBoard(
-    id: string
+    pathParams: { id: string },
 ): Promise<any> {
     try {
-        const url = `${apiUrl}/boards/${id}?${apiAuth}`; // PUT
+        const url = `${apiUrl}/boards/${pathParams.id}?${apiAuth}`; // PUT
         const response = await axios.delete(url);
         return response.data
     } catch (error: any) {

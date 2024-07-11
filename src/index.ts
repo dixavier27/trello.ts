@@ -19,9 +19,10 @@ import { Members, Boards, Cards } from "./Trello";
 //     console.log('\x1b[36m%s\x1b[0m', '✅ updateBoard:', res, '\n');
 // });
 
-// Boards.deleteBoard('668d9bf0de01eea4c37ab6c4').then(res => {
-//     console.log('\x1b[36m%s\x1b[0m', '✅ deleteBoard:', true, '\n');
-// });
+// Boards.deleteBoard({ id: '66905a4087c2e2b63ff8004c' })
+//     .then(res => {
+//         console.log('\x1b[36m%s\x1b[0m', '✅ deleteBoard:', true, '\n');
+//     });
 
 // Boards.createBoard({ name: 'Exemplo de Quadro' })
 //     .then(res => {
