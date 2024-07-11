@@ -19,8 +19,8 @@ import { Board } from "./Interfaces/Board";
 
 // GET /members/{id}/boards
 export async function getMemberBoards(
-    id: string,
-    params?: {
+    pathParams: { id: string },
+    queryParams?: {
         filter?: 'all' | 'closed' | 'members' | 'open' | 'organization' | 'public' | 'starred',
         fields?: string,
         lists?: string,
@@ -28,8 +28,8 @@ export async function getMemberBoards(
         organization_fields?: string
     }): Promise<Board[]> {
     try {
-        const url = `${apiUrl}/members/${id}/boards?${apiAuth}`; // GET
-        const response = await axios.get(url, { params });
+        const url = `${apiUrl}/members/${pathParams.id}/boards?${apiAuth}`;
+        const response = await axios.get(url, { params: queryParams });
         return response.data
     } catch (error: any) {
         const err = `❌ Error (${error.response.status}): ${error.response.statusText} - ${error.response.data}`
