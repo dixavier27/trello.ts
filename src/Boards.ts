@@ -60,8 +60,8 @@ export async function getBoard(
 
 // PUT /boards/{id}
 export async function updateBoard(
-    id: string,
-    params?: {
+    pathParams: { id: string },
+    queryParams?: {
         name?: string;
         desc?: string;
         closed?: boolean;
@@ -90,8 +90,8 @@ export async function updateBoard(
     }
 ): Promise<Board> {
     try {
-        const url = `${apiUrl}/boards/${id}?${apiAuth}`; // PUT
-        const response = await axios.put(url, params);
+        const url = `${apiUrl}/boards/${pathParams.id}?${apiAuth}`; // PUT
+        const response = await axios.put(url, queryParams);
         return response.data
     } catch (error: any) {
         const err = `❌ Error (${error.response.status}): ${error.response.statusText} - ${error.response.data}`
