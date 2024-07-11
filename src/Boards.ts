@@ -149,15 +149,15 @@ export async function getBoardLists(
 
 // POST /boards/{id}/lists
 export async function createBoardList(
-    id: string,
-    params?: {
+    pathParams: { id: string },
+    queryParams?: {
         name: string,
         pos?: string
     }
 ): Promise<List> {
     try {
-        const url = `${apiUrl}/boards/${id}/lists?${apiAuth}`; // GET
-        const response = await axios.post(url, params);
+        const url = `${apiUrl}/boards/${pathParams.id}/lists?${apiAuth}`; // GET
+        const response = await axios.post(url, queryParams);
         return response.data
     } catch (error: any) {
         const err = `❌ Error (${error.response.status}): ${error.response.statusText} - ${error.response.data}`
