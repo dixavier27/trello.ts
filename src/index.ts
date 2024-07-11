@@ -1,9 +1,9 @@
 import { Members, Boards, Cards } from "./Trello";
 
-Members.getMemberBoards({ id: 'me' }, { filter: 'starred', fields: 'name,desc,starred' })
-    .then(res => {
-        console.log('\x1b[36m%s\x1b[0m', '✅ getMemberBoards:', res, '\n');
-    });
+// Members.getMemberBoards({ id: 'me' }, { filter: 'starred', fields: 'name,desc,starred' })
+//     .then(res => {
+//         console.log('\x1b[36m%s\x1b[0m', '✅ getMemberBoards:', res, '\n');
+//     });
 
 // Boards.getBoardMemberships({ id: '66884501d7ef1f7f86227287' }, { filter: 'all', member: true, member_fields: 'id,username' })
 //     .then(res => {
@@ -24,11 +24,6 @@ Members.getMemberBoards({ id: 'me' }, { filter: 'starred', fields: 'name,desc,st
 //         console.log('\x1b[36m%s\x1b[0m', '✅ deleteBoard:', true, '\n');
 //     });
 
-// Boards.createBoard({ name: 'Exemplo de Quadro' })
-//     .then(res => {
-//         console.log('\x1b[36m%s\x1b[0m', '✅ createBoard:', res, '\n');
-//     });
-
 // Boards.getBoardLists({ id: '66884501d7ef1f7f86227287' }, { cards: 'all', fields: 'name', card_fields: undefined })
 //     .then(res => {
 //         console.log('\x1b[36m%s\x1b[0m', '✅ getBoardLists:', res, '\n');
@@ -37,6 +32,11 @@ Members.getMemberBoards({ id: 'me' }, { filter: 'starred', fields: 'name,desc,st
 // Boards.createBoardList({ id: '66884501d7ef1f7f86227287' }, { name: 'Nome maluco' })
 //     .then(res => {
 //         console.log('\x1b[36m%s\x1b[0m', '✅ createBoardList:', res, '\n');
+//     });
+
+// Boards.createBoard({ name: 'Exemplo de Quadro' })
+//     .then(res => {
+//         console.log('\x1b[36m%s\x1b[0m', '✅ createBoard:', res, '\n');
 //     });
 
 // Cards.createCard({ name: 'Nome Maluco!', idList: '668e269a5211a160aa9cebcf' }).then(res => {
