@@ -128,8 +128,8 @@ export async function deleteBoard(
 
 // GET /boards/{id}/lists
 export async function getBoardLists(
-    id: string,
-    params?: {
+    pathParams: { id: string },
+    queryParams?: {
         cards?: 'all' | 'closed' | 'none' | 'open',
         card_fields?: string,
         filter?: 'all' | 'closed' | 'none' | 'open',
@@ -137,8 +137,8 @@ export async function getBoardLists(
     }
 ): Promise<List[]> {
     try {
-        const url = `${apiUrl}/boards/${id}/lists?${apiAuth}`; // GET
-        const response = await axios.get(url, { params });
+        const url = `${apiUrl}/boards/${pathParams.id}/lists?${apiAuth}`; // GET
+        const response = await axios.get(url, { params: queryParams });
         return response.data
     } catch (error: any) {
         const err = `❌ Error (${error.response.status}): ${error.response.statusText} - ${error.response.data}`

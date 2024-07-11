@@ -29,9 +29,10 @@ import { Members, Boards, Cards } from "./Trello";
 //         console.log('\x1b[36m%s\x1b[0m', '✅ createBoard:', res, '\n');
 //     });
 
-// Boards.getBoardLists('66884501d7ef1f7f86227287', { cards: 'all', fields: 'name', card_fields: undefined }).then(res => {
-//     console.log('\x1b[36m%s\x1b[0m', '✅ getBoardLists:', res, '\n');
-// });
+// Boards.getBoardLists({ id: '66884501d7ef1f7f86227287' }, { cards: 'all', fields: 'name', card_fields: undefined })
+//     .then(res => {
+//         console.log('\x1b[36m%s\x1b[0m', '✅ getBoardLists:', res, '\n');
+//     });
 
 // Boards.createBoardList('66884501d7ef1f7f86227287', { name: 'A ser feito' }).then(res => {
 //     console.log('\x1b[36m%s\x1b[0m', '✅ getBoardLists:', res, '\n');
