@@ -5,9 +5,10 @@ import { Members, Boards, Cards } from "./Trello";
 //         console.log('\x1b[36m%s\x1b[0m', '✅ getMemberBoards:', res, '\n');
 //     });
 
-// Boards.getBoardMemberships('66884501d7ef1f7f86227287', { filter: 'all', member: true, member_fields: 'username' }).then(res => {
-//     console.log('\x1b[36m%s\x1b[0m', '✅ Members:', res, '\n');
-// });
+// Boards.getBoardMemberships({ id: '66884501d7ef1f7f86227287' }, { filter: 'all', member: true, member_fields: 'id,username' })
+//     .then(res => {
+//         console.log('\x1b[36m%s\x1b[0m', '✅ getBoardMemberships:', res, '\n');
+//     });
 
 // Boards.getBoard('66884501d7ef1f7f86227287', { fields: 'name' }).then(res => {
 //     console.log('\x1b[36m%s\x1b[0m', '✅ getBoard:', res, '\n');

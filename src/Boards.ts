@@ -5,18 +5,18 @@ import { List } from './Interfaces/List';
 
 // GET /boards/{id}/memberships
 export async function getBoardMemberships(
-    id: string,
-    params?: {
+    pathParams: { id: string },
+    queryParams?: {
         filter?: 'admins' | 'all' | 'none' | 'normal',
         activity?: boolean;
         orgMemberType?: boolean;
         member?: boolean;
-        member_fields?: string; // interface
+        member_fields?: string;
     }
 ): Promise<any> {
     try {
-        const url = `${apiUrl}/boards/${id}/memberships?${apiAuth}`; // GET
-        const response = await axios.get(url, { params });
+        const url = `${apiUrl}/boards/${pathParams.id}/memberships?${apiAuth}`; // GET
+        const response = await axios.get(url, { params: queryParams });
         return response.data
     } catch (error: any) {
         const err = `❌ Error (${error.response.status}): ${error.response.statusText} - ${error.response.data}`
