@@ -182,7 +182,7 @@ export async function createBoardList(
 
 // POST /boards/
 export async function createBoard(
-    params: {
+    queryParams: {
         name: string,
         defaultLabels?: boolean,
         defaultLists?: boolean,
@@ -202,7 +202,7 @@ export async function createBoard(
     }): Promise<Board> {
     try {
         const url = `${apiUrl}/boards/?${apiAuth}`; // POST
-        const response = await axios.post(url, params);
+        const response = await axios.post(url, queryParams);
         return response.data
     } catch (error: any) {
         const err = `❌ Error (${error.response.status}): ${error.response.statusText} - ${error.response.data}`
