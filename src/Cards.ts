@@ -70,8 +70,9 @@ export async function getCard(
 }
 
 // PUT /cards/{id}
-export async function updateCard(id: string,
-    params?: {
+export async function updateCard(
+    pathParams: { id: string },
+    queryParams?: {
         name?: string,
         desc?: string,
         closed?: boolean,
@@ -91,8 +92,8 @@ export async function updateCard(id: string,
         cover?: object,
     }): Promise<Card> {
     try {
-        const url = `${apiUrl}/cards/${id}?${apiAuth}`; // PUT
-        const response = await axios.put(url, params);
+        const url = `${apiUrl}/cards/${pathParams.id}?${apiAuth}`; // PUT
+        const response = await axios.put(url, queryParams);
         return response.data
     } catch (error: any) {
         const err = `❌ Error (${error.response.status}): ${error.response.statusText} - ${error.response.data}`
