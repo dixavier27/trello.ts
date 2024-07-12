@@ -40,6 +40,11 @@ import { Members, Boards, Cards, Lists } from "./Trello";
 //         console.log('\x1b[36m%s\x1b[0m', '✅ getBoardCard:', res, '\n');
 //     });
 
+// Boards.getBoardStars({ boardId: '66884501d7ef1f7f86227287' }, { filter: undefined })
+//     .then(res => {
+//         console.log('\x1b[36m%s\x1b[0m', '✅ getBoardStars:', res, '\n');
+//     });
+
 // Boards.getBoardLists({ id: '66884501d7ef1f7f86227287' }, { cards: 'all', fields: 'name', card_fields: undefined })
 //     .then(res => {
 //         console.log('\x1b[36m%s\x1b[0m', '✅ getBoardLists:', res, '\n');

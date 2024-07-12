@@ -192,8 +192,22 @@ export async function getBoardCard(
     }
 }
 
-
 // GET /boards/{boardId}/boardStars
+export async function getBoardStars(
+    pathParams: { boardId: string },
+    queryParams?: { filter?: string }
+): Promise<any> {
+    try {
+        const url = `${apiUrl}/boards/${pathParams.boardId}/boardStars?${apiAuth}`; // GET
+        const response = await axios.get(url, { params: queryParams });
+        return response.data
+    } catch (error: any) {
+        const err = `❌ Error (${error.response.status}): ${error.response.statusText} - ${error.response.data}`
+        console.error(err);
+        throw new Error(err);
+    }
+}
+
 // GET /boards/{id}/checklists
 // GET /boards/{id}/cards
 // GET /boards/{id}/cards/{filter}
