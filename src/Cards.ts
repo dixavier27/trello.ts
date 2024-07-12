@@ -103,9 +103,9 @@ export async function updateCard(
 }
 
 // DEL /cards/{id}
-export async function deleteCard(id: string): Promise<Card> {
+export async function deleteCard(pathParams: { id: string },): Promise<Card> {
     try {
-        const url = `${apiUrl}/cards/${id}?${apiAuth}`; // POST
+        const url = `${apiUrl}/cards/${pathParams.id}?${apiAuth}`; // POST
         const response = await axios.delete(url);
         return response.data
     } catch (error: any) {
