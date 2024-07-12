@@ -54,7 +54,7 @@ At the total, Trello's API have `18 endpoints` (Actions, Applications, Batch, Bo
 ### Batch
 	* [ ] GET /batch
 ### Boards
-	* [x] GET /boards/{id}/memberships → Boards.getBoardMemberships()
+	* [x] GET /boards/{id}/memberships → **Boards.getBoardMemberships()**
 	* [x] GET /boards/{id} → Boards.getBoard()
 	* [x] PUT /boards/{id} → Boards.updateBoard()
 	* [x] DEL /boards/{id} → Boards.deleteBoard()
