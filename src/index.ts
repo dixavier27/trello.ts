@@ -39,9 +39,10 @@ import { Members, Boards, Cards } from "./Trello";
 //         console.log('\x1b[36m%s\x1b[0m', '✅ createBoard:', res, '\n');
 //     });
 
-// Cards.createCard({ name: 'Nome Maluco!', idList: '668e269a5211a160aa9cebcf' }).then(res => {
-//     console.log('\x1b[36m%s\x1b[0m', '✅ createCard:', res, '\n');
-// });
+// Cards.createCard({ idList: '668e269a5211a160aa9cebcf', name: undefined, desc: 'Some description' })
+//     .then(res => {
+//         console.log('\x1b[36m%s\x1b[0m', '✅ createCard:', res, '\n');
+//     });
 
 // Cards.getCard('668e17ee001286d8be81c582', { fields: 'name' }).then(res => {
 //     console.log('\x1b[36m%s\x1b[0m', '✅ getCard:', res, '\n');

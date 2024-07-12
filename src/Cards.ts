@@ -4,7 +4,7 @@ import { Card } from './Interfaces/Card'
 
 // POST /cards
 export async function createCard(
-    params: {
+    queryParams?: {
         name?: string;
         desc?: string;
         pos?: string | number;
@@ -26,7 +26,7 @@ export async function createCard(
 ): Promise<Card> {
     try {
         const url = `${apiUrl}/cards?${apiAuth}`; // POST
-        const response = await axios.post(url, params);
+        const response = await axios.post(url, queryParams);
         return response.data
     } catch (error: any) {
         const err = `❌ Error (${error.response.status}): ${error.response.statusText} - ${error.response.data}`
