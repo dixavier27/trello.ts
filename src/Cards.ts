@@ -116,9 +116,9 @@ export async function deleteCard(pathParams: { id: string },): Promise<Card> {
 }
 
 // GET /cards/{id}/{field}
-export async function getCardField(id: string, field: string): Promise<Card> {
+export async function getCardField(pathParams: { id: string, field: string }): Promise<Card> {
     try {
-        const url = `${apiUrl}/cards/${id}/${field}?${apiAuth}`; // POST
+        const url = `${apiUrl}/cards/${pathParams.id}/${pathParams.field}?${apiAuth}`; // POST
         const response = await axios.get(url);
         return response.data
     } catch (error: any) {

@@ -59,6 +59,7 @@ import { Members, Boards, Cards } from "./Trello";
 //         console.log('\x1b[36m%s\x1b[0m', '✅ deleteCard:', res, '\n');
 //     });
 
-// Cards.getCardField('668e41e433684df90914989e', 'desc').then(res => {
-//     console.log('\x1b[36m%s\x1b[0m', '✅ getCardField:', res, '\n');
-// });
+// Cards.getCardField({ id: '66908353a4612845522ded37', field: 'desc' })
+//     .then(res => {
+//         console.log('\x1b[36m%s\x1b[0m', '✅ getCardField:', res, '\n');
+//     });
