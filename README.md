@@ -16,9 +16,9 @@ At the total, Trello's API have `18 endpoints` (Actions, Applications, Batch, Bo
 
 **Endpoints: 0/18**
 
-**Operations: 15/257**
+**Operations: 16/257**
 
-**Total: 5,84%**
+**Total: 6,22%**
 
 ### Actions
 	* [ ] GET /actions/{id}
@@ -47,7 +47,7 @@ At the total, Trello's API have `18 endpoints` (Actions, Applications, Batch, Bo
 	* [x] PUT /boards/{id}
 	* [x] DEL /boards/{id}
 	* [x] GET /boards/{id}/{field}
-	* [ ] GET /boards/{boardId}/actions
+	* [x] GET /boards/{boardId}/actions
 	* [ ] GET /boards/{id}/cards/{idCard}
 	* [ ] GET /boards/{boardId}/boardStars
 	* [ ] GET /boards/{id}/checklists

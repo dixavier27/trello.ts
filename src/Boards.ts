@@ -131,6 +131,35 @@ export async function getBoardField(
 }
 
 // GET /boards/{boardId}/actions
+export async function getBoardActions(
+    pathParams: { boardId: string },
+    queryParams?: {
+        fields?: string,
+        filter?: string,
+        format?: string,
+        idModels?: string,
+        limit?: number,
+        member?: boolean,
+        member_fields?: string,
+        memberCreator?: boolean,
+        memberCreator_fields?: string,
+        page?: number,
+        reactions?: boolean,
+        before?: string,
+        since?: string
+    }
+): Promise<Board> {
+    try {
+        const url = `${apiUrl}/boards/${pathParams.boardId}/actions?${apiAuth}`; // GET
+        const response = await axios.get(url, { params: queryParams });
+        return response.data
+    } catch (error: any) {
+        const err = `❌ Error (${error.response.status}): ${error.response.statusText} - ${error.response.data}`
+        console.error(err);
+        throw new Error(err);
+    }
+}
+
 // GET /boards/{id}/cards/{idCard}
 // GET /boards/{boardId}/boardStars
 // GET /boards/{id}/checklists
