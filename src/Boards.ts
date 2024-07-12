@@ -3,6 +3,7 @@ import { apiUrl, apiAuth } from './Trello';
 import { Board } from './Interfaces/Board';
 import { List } from './Interfaces/List';
 import { Action } from './Interfaces/Action';
+import { Card } from './Interfaces/Card';
 
 // GET /boards/{id}/memberships
 export async function getBoardMemberships(
@@ -162,6 +163,36 @@ export async function getBoardActions(
 }
 
 // GET /boards/{id}/cards/{idCard}
+export async function getBoardCard(
+    pathParams: { id: string, idCard: string },
+    queryParams?: {
+        fields?: string,
+        filter?: string,
+        format?: string,
+        idModels?: string,
+        limit?: number,
+        member?: boolean,
+        member_fields?: string,
+        memberCreator?: boolean,
+        memberCreator_fields?: string,
+        page?: number,
+        reactions?: boolean,
+        before?: string,
+        since?: string
+    }
+): Promise<Card> {
+    try {
+        const url = `${apiUrl}/boards/${pathParams.id}/cards/${pathParams.idCard}?${apiAuth}`; // GET
+        const response = await axios.get(url, { params: queryParams });
+        return response.data
+    } catch (error: any) {
+        const err = `❌ Error (${error.response.status}): ${error.response.statusText} - ${error.response.data}`
+        console.error(err);
+        throw new Error(err);
+    }
+}
+
+
 // GET /boards/{boardId}/boardStars
 // GET /boards/{id}/checklists
 // GET /boards/{id}/cards
