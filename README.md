@@ -55,21 +55,21 @@ At the total, Trello's API have `18 endpoints` (Actions, Applications, Batch, Bo
 	* [ ] GET /batch
 ### Boards
 	* [x] GET /boards/{id}/memberships → Boards.getBoardMemberships()
-	* [x] GET /boards/{id} // Boards.getBoard()
-	* [x] PUT /boards/{id} // Boards.updateBoard()
-	* [x] DEL /boards/{id} // Boards.deleteBoard()
-	* [x] GET /boards/{id}/{field} // Boards.getBoardField()
-	* [x] GET /boards/{boardId}/actions // Boards.getBoardActions()
-	* [x] GET /boards/{id}/cards/{idCard} // Boards.getBoardCard()
-	* [x] GET /boards/{boardId}/boardStars // Boards.getBoardStars()
+	* [x] GET /boards/{id} → Boards.getBoard()
+	* [x] PUT /boards/{id} → Boards.updateBoard()
+	* [x] DEL /boards/{id} → Boards.deleteBoard()
+	* [x] GET /boards/{id}/{field} → Boards.getBoardField()
+	* [x] GET /boards/{boardId}/actions → Boards.getBoardActions()
+	* [x] GET /boards/{id}/cards/{idCard} → Boards.getBoardCard()
+	* [x] GET /boards/{boardId}/boardStars → Boards.getBoardStars()
 	* [ ] GET /boards/{id}/checklists
 	* [ ] GET /boards/{id}/cards
 	* [ ] GET /boards/{id}/cards/{filter}
 	* [ ] GET /boards/{id}/customFields
 	* [ ] GET /boards/{id}/labels
 	* [ ] POST /boards/{id}/labels
-	* [x] GET /boards/{id}/lists // Boards.getBoardLists()
-	* [x] POST /boards/{id}/lists // Boards.createBoardList()
+	* [x] GET /boards/{id}/lists → Boards.getBoardLists()
+	* [x] POST /boards/{id}/lists → Boards.createBoardList()
 	* [ ] GET /boards/{id}/lists/{filter}
 	* [ ] GET /boards/{id}/members
 	* [ ] PUT /boards/{id}/members
@@ -83,7 +83,7 @@ At the total, Trello's API have `18 endpoints` (Actions, Applications, Batch, Bo
 	* [ ] PUT /boards/{id}/myPrefs/showSidebarActivity
 	* [ ] PUT /boards/{id}/myPrefs/showSidebarBoardActions
 	* [ ] PUT /boards/{id}/myPrefs/showSidebarMembers
-	* [x] POST /boards/ // Boards.createBoard()
+	* [x] POST /boards/ → Boards.createBoard()
 	* [ ] POST /boards/{id}/calendarKey/generate
 	* [ ] POST /boards/{id}/emailKey/generate
 	* [ ] POST /boards/{id}/idTags
@@ -93,11 +93,11 @@ At the total, Trello's API have `18 endpoints` (Actions, Applications, Batch, Bo
 	* [ ] DEL /boards/{id}/boardPlugins/{idPlugin}
 	* [ ] GET /boards/{id}/plugins
 ### Cards
-	* [x] POST /cards
-	* [x] GET /cards/{id}
-	* [x] PUT /cards/{id}
-	* [x] DEL /cards/{id}
-	* [x] GET /cards/{id}/{field}
+	* [x] POST /cards → Cards.createCard()
+	* [x] GET /cards/{id} → Cards.getCard()
+	* [x] PUT /cards/{id} → Cards.updateCard()
+	* [x] DEL /cards/{id} → Cards.deleteCard()
+	* [x] GET /cards/{id}/{field} → Cards.getCardField()
 	* [ ] GET /cards/{id}/actions
 	* [ ] GET /cards/{id}/attachments
 	* [ ] POST /cards/{id}/attachments
@@ -187,7 +187,7 @@ At the total, Trello's API have `18 endpoints` (Actions, Applications, Batch, Bo
 	* [ ] PUT /labels/{id}/{field}
 	* [ ] POST /labels
 ### Lists
-	* [x] GET /lists/{id}
+	* [x] GET /lists/{id} → Lists.getList()
 	* [ ] PUT /lists/{id}
 	* [ ] POST /lists
 	* [ ] POST /lists/{id}/archiveAllCards
@@ -213,7 +213,7 @@ At the total, Trello's API have `18 endpoints` (Actions, Applications, Batch, Bo
 	* [ ] GET /members/{id}/boardStars/{idStar}
 	* [ ] PUT /members/{id}/boardStars/{idStar}
 	* [ ] DEL /members/{id}/boardStars/{idStar}
-	* [x] GET /members/{id}/boards
+	* [x] GET /members/{id}/boards → Members.getMemberBoards()
 	* [ ] GET /members/{id}/boardsInvited
 	* [ ] GET /members/{id}/cards
 	* [ ] GET /members/{id}/customBoardBackgrounds
