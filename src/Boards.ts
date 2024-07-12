@@ -209,6 +209,20 @@ export async function getBoardStars(
 }
 
 // GET /boards/{id}/checklists
+export async function getBoardChecklists(
+    pathParams: { id: string }
+): Promise<any> {
+    try {
+        const url = `${apiUrl}/boards/${pathParams.id}/checklists?${apiAuth}`; // GET
+        const response = await axios.get(url);
+        return response.data
+    } catch (error: any) {
+        const err = `❌ Error (${error.response.status}): ${error.response.statusText} - ${error.response.data}`
+        console.error(err);
+        throw new Error(err);
+    }
+}
+
 // GET /boards/{id}/cards
 // GET /boards/{id}/cards/{filter}
 // GET /boards/{id}/customFields
