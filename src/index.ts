@@ -15,9 +15,10 @@ import { Members, Boards, Cards, Lists } from "./Trello";
 //         console.log('\x1b[36m%s\x1b[0m', '✅ getBoard:', res, '\n');
 //     })
 
-// Boards.updateBoard({ id: '66884501d7ef1f7f86227287' }, { name: 'Quadro #1', closed: false }).then(res => {
-//     console.log('\x1b[36m%s\x1b[0m', '✅ updateBoard:', res, '\n');
-// });
+// Boards.updateBoard({ id: '66884501d7ef1f7f86227287' }, { name: 'Quadro #1', closed: false })
+//     .then(res => {
+//         console.log('\x1b[36m%s\x1b[0m', '✅ updateBoard:', res, '\n');
+//     });
 
 // Boards.deleteBoard({ id: '66905a4087c2e2b63ff8004c' })
 //     .then(res => {
