@@ -1,4 +1,15 @@
 # Documentation
+
+**Instalation**
+````
+npm i git+https://github.com/dixavier27/trello.ts.git 
+````
+
+**Import the module**
+````
+import { Members, Boards, Cards, Lists } from "./Trello";
+````
+
 **Trello Power-Ups and Integrations**
 ````
 https://trello.com/power-ups/admin
@@ -20,6 +31,7 @@ At the total, Trello's API have `18 endpoints` (Actions, Applications, Batch, Bo
 
 **Total: 7%**
 
+## Endpoints
 ### Actions
 	* [ ] GET /actions/{id}
 	* [ ] PUT /actions/{id}
@@ -42,22 +54,22 @@ At the total, Trello's API have `18 endpoints` (Actions, Applications, Batch, Bo
 ### Batch
 	* [ ] GET /batch
 ### Boards
-	* [x] GET /boards/{id}/memberships
-	* [x] GET /boards/{id}
-	* [x] PUT /boards/{id}
-	* [x] DEL /boards/{id}
-	* [x] GET /boards/{id}/{field}
-	* [x] GET /boards/{boardId}/actions
-	* [x] GET /boards/{id}/cards/{idCard}
-	* [x] GET /boards/{boardId}/boardStars
+	* [x] GET /boards/{id}/memberships → Boards.getBoardMemberships()
+	* [x] GET /boards/{id} // Boards.getBoard()
+	* [x] PUT /boards/{id} // Boards.updateBoard()
+	* [x] DEL /boards/{id} // Boards.deleteBoard()
+	* [x] GET /boards/{id}/{field} // Boards.getBoardField()
+	* [x] GET /boards/{boardId}/actions // Boards.getBoardActions()
+	* [x] GET /boards/{id}/cards/{idCard} // Boards.getBoardCard()
+	* [x] GET /boards/{boardId}/boardStars // Boards.getBoardStars()
 	* [ ] GET /boards/{id}/checklists
 	* [ ] GET /boards/{id}/cards
 	* [ ] GET /boards/{id}/cards/{filter}
 	* [ ] GET /boards/{id}/customFields
 	* [ ] GET /boards/{id}/labels
 	* [ ] POST /boards/{id}/labels
-	* [x] GET /boards/{id}/lists
-	* [x] POST /boards/{id}/lists
+	* [x] GET /boards/{id}/lists // Boards.getBoardLists()
+	* [x] POST /boards/{id}/lists // Boards.createBoardList()
 	* [ ] GET /boards/{id}/lists/{filter}
 	* [ ] GET /boards/{id}/members
 	* [ ] PUT /boards/{id}/members
@@ -71,7 +83,7 @@ At the total, Trello's API have `18 endpoints` (Actions, Applications, Batch, Bo
 	* [ ] PUT /boards/{id}/myPrefs/showSidebarActivity
 	* [ ] PUT /boards/{id}/myPrefs/showSidebarBoardActions
 	* [ ] PUT /boards/{id}/myPrefs/showSidebarMembers
-	* [x] POST /boards/
+	* [x] POST /boards/ // Boards.createBoard()
 	* [ ] POST /boards/{id}/calendarKey/generate
 	* [ ] POST /boards/{id}/emailKey/generate
 	* [ ] POST /boards/{id}/idTags
