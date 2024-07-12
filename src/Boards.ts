@@ -239,6 +239,20 @@ export async function getBoardCards(
 }
 
 // GET /boards/{id}/cards/{filter}
+export async function getBoardCardsByFilter(
+    pathParams: { id: string, filter: string }
+): Promise<Card[]> {
+    try {
+        const url = `${apiUrl}/boards/${pathParams.id}/cards/${pathParams.filter}?${apiAuth}`; // GET
+        const response = await axios.get(url);
+        return response.data
+    } catch (error: any) {
+        const err = `❌ Error (${error.response.status}): ${error.response.statusText} - ${error.response.data}`
+        console.error(err);
+        throw new Error(err);
+    }
+}
+
 // GET /boards/{id}/customFields
 // GET /boards/{id}/labels
 // POST /boards/{id}/labels
