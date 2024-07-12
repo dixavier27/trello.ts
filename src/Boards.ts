@@ -116,6 +116,20 @@ export async function deleteBoard(
 }
 
 // GET /boards/{id}/{field}
+export async function getBoardField(
+    pathParams: { id: string, field: string }
+): Promise<Board> {
+    try {
+        const url = `${apiUrl}/boards/${pathParams.id}/${pathParams.field}?${apiAuth}`; // GET
+        const response = await axios.get(url);
+        return response.data
+    } catch (error: any) {
+        const err = `❌ Error (${error.response.status}): ${error.response.statusText} - ${error.response.data}`
+        console.error(err);
+        throw new Error(err);
+    }
+}
+
 // GET /boards/{boardId}/actions
 // GET /boards/{id}/cards/{idCard}
 // GET /boards/{boardId}/boardStars
