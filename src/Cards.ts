@@ -36,29 +36,31 @@ export async function createCard(
 }
 
 // GET /cards/{id}
-export async function getCard(id: string, params?: {
-    fields?: string,
-    actions?: string,
-    attachments?: string | boolean,
-    attachment_fields?: string,
-    members?: boolean,
-    member_fields?: string,
-    membersVoted?: boolean,
-    memberVoted_fields?: string,
-    checkItemStates?: boolean,
-    checklists?: string,
-    checklist_fields?: string,
-    board?: boolean,
-    board_fields?: string,
-    list?: boolean,
-    pluginData?: boolean,
-    stickers?: boolean,
-    sticker_fields?: string,
-    customFieldItems?: boolean,
-}): Promise<Card> {
+export async function getCard(
+    pathParams: { id: string },
+    queryParams?: {
+        fields?: string,
+        actions?: string,
+        attachments?: string | boolean,
+        attachment_fields?: string,
+        members?: boolean,
+        member_fields?: string,
+        membersVoted?: boolean,
+        memberVoted_fields?: string,
+        checkItemStates?: boolean,
+        checklists?: string,
+        checklist_fields?: string,
+        board?: boolean,
+        board_fields?: string,
+        list?: boolean,
+        pluginData?: boolean,
+        stickers?: boolean,
+        sticker_fields?: string,
+        customFieldItems?: boolean,
+    }): Promise<Card> {
     try {
-        const url = `${apiUrl}/cards/${id}?${apiAuth}`; // POST
-        const response = await axios.get(url, { params });
+        const url = `${apiUrl}/cards/${pathParams.id}?${apiAuth}`; // POST
+        const response = await axios.get(url, { params: queryParams });
         return response.data
     } catch (error: any) {
         const err = `❌ Error (${error.response.status}): ${error.response.statusText} - ${error.response.data}`
