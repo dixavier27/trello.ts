@@ -2,6 +2,7 @@ import axios from 'axios';
 import { apiUrl, apiAuth } from './Trello';
 import { Board } from './Interfaces/Board';
 import { List } from './Interfaces/List';
+import { Action } from './Interfaces/Action';
 
 // GET /boards/{id}/memberships
 export async function getBoardMemberships(
@@ -148,7 +149,7 @@ export async function getBoardActions(
         before?: string,
         since?: string
     }
-): Promise<Board> {
+): Promise<Action[]> {
     try {
         const url = `${apiUrl}/boards/${pathParams.boardId}/actions?${apiAuth}`; // GET
         const response = await axios.get(url, { params: queryParams });
