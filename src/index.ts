@@ -1,4 +1,4 @@
-import { Members, Boards, Cards } from "./Trello";
+import { Members, Boards, Cards, Lists } from "./Trello";
 
 // Members.getMemberBoards({ id: 'me' }, { filter: 'starred', fields: 'name,desc,starred' })
 //     .then(res => {
@@ -63,3 +63,8 @@ import { Members, Boards, Cards } from "./Trello";
 //     .then(res => {
 //         console.log('\x1b[36m%s\x1b[0m', '✅ getCardField:', res, '\n');
 //     });
+
+// Lists.getList({ id: '669066e4fb4543dba9e62de2' }, { fields: undefined })
+//     .then(res => {
+//         console.log('\x1b[36m%s\x1b[0m', '✅ getList:', res, '\n');
+//     })
