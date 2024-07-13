@@ -1,5 +1,5 @@
 import axios from "axios";
-import { apiUrl, apiAuth } from "./Trello";
+import { apiUrl, apiAuth } from ".";
 import { Board } from "./Interfaces/Board";
 
 // GET /members/{id}

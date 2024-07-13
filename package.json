@@ -3,10 +3,10 @@
   "version": "0.1.0-beta",
   "description": "An API made with Typescript for Trello",
   "type": "commonjs",
-  "main": "src/Trello.ts",
+  "main": "src/index.ts",
   "scripts": {
     "start": "tsx src/Trello.ts",
-    "start:dev": "tsx watch src/Trello.ts",
+    "start:dev": "tsx watch src/index.ts",
     "build": "tsup src"
   },
   "repository": {

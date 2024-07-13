@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { apiAuth, apiUrl } from './Trello';
+import { apiAuth, apiUrl } from '.';
 
 // GET /lists/{id}
 export async function getList(
