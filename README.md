@@ -7,7 +7,7 @@ npm i git+https://github.com/dixavier27/trello.ts.git
 
 **Import the module**
 ````
-import { Members, Boards, Cards, Lists } from "./Trello";
+import { Members, Boards, Cards, Lists } from "trello.ts";
 ````
 
 **Trello Power-Ups and Integrations**
@@ -311,7 +311,7 @@ At the total, Trello's API have `18 endpoints` (Actions, Applications, Batch, Bo
 ## Usage
 
 ````typescript
-import { Members, Boards, Cards, Lists } from "./Trello";
+import { Members, Boards, Cards, Lists } from "trello.ts";
 
 Members.getMemberBoards({ id: 'me' }, { filter: 'starred', fields: 'name,desc,starred' })
     .then(res => {
