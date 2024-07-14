@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { apiAuth, apiUrl } from '.';
-import { Card } from './Interfaces/Card'
+import { apiAuth, apiUrl } from '..';
+import { Card } from '../interfaces/Card'
 
 // POST /cards
 export async function createCard(

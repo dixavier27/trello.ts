@@ -1,9 +1,9 @@
 import axios from 'axios';
-import { apiUrl, apiAuth } from '.';
-import { Board } from './Interfaces/Board';
-import { List } from './Interfaces/List';
-import { Action } from './Interfaces/Action';
-import { Card } from './Interfaces/Card';
+import { apiUrl, apiAuth } from '..';
+import { Board } from '../interfaces/Board';
+import { List } from '../interfaces/List';
+import { Action } from '../interfaces/Action';
+import { Card } from '../interfaces/Card';
 
 // GET /boards/{id}/memberships
 export async function getBoardMemberships(

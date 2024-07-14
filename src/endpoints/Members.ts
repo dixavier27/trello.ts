@@ -1,6 +1,6 @@
 import axios from "axios";
-import { apiUrl, apiAuth } from ".";
-import { Board } from "./Interfaces/Board";
+import { apiUrl, apiAuth } from "..";
+import { Board } from "../interfaces/Board";
 
 // GET /members/{id}
 // PUT /members/{id}

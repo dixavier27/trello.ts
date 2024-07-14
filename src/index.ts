@@ -1,40 +1,40 @@
 import dotenv from "dotenv";
 
-export import Action = require('./Actions');
+export import Action = require('./endpoints/Actions');
 
-export import Applications = require('./Applications');
+export import Applications = require('./endpoints/Applications');
 
-export import Batch = require('./Batch');
+export import Batch = require('./endpoints/Batch');
 
-export import Boards = require('./Boards');
+export import Boards = require('./endpoints/Boards');
 
-export import Cards = require('./Cards');
+export import Cards = require('./endpoints/Cards');
 
-export import Checklists = require('./Checklists');
+export import Checklists = require('./endpoints/Checklists');
 
-export import CustomFields = require('./CustomFields');
+export import CustomFields = require('./endpoints/CustomFields');
 
-export import Emoji = require('./Emoji');
+export import Emoji = require('./endpoints/Emoji');
 
-export import Enterprises = require('./Enterprises');
+export import Enterprises = require('./endpoints/Enterprises');
 
-export import Labels = require('./Labels');
+export import Labels = require('./endpoints/Labels');
 
-export import Lists = require('./Lists');
+export import Lists = require('./endpoints/Lists');
 
-export import Members = require('./Members');
+export import Members = require('./endpoints/Members');
 
-export import Notifications = require('./Notifications');
+export import Notifications = require('./endpoints/Notifications');
 
-export import Organizations = require('./Organizations');
+export import Organizations = require('./endpoints/Organizations');
 
-export import Plugins = require('./Plugins');
+export import Plugins = require('./endpoints/Plugins');
 
-export import Search = require('./Search');
+export import Search = require('./endpoints/Search');
 
-export import Tokens = require('./Tokens');
+export import Tokens = require('./endpoints/Tokens');
 
-export import Webhooks = require('./Webhooks');
+export import Webhooks = require('./endpoints/Webhooks');
 
 dotenv.config();
 
